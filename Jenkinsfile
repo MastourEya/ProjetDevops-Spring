@@ -13,7 +13,7 @@ pipeline {
             steps {
                 emailext body: "Veuillez trouver ci-dessous le contenu du README.md :\n\n${readFile('README.md')}",
                 subject: "Nouveau commit sur GitHub",
-                to: 'eya.mastour@esprit.tn'
+                to: 'eyamastour22@gmail.com'
             }
         }
     }
