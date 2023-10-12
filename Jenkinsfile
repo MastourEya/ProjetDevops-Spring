@@ -3,11 +3,11 @@ pipeline {
   stages {
     stage('Envoyer un e-mail') {
       steps {
-        emailext(
+        email(
           subject: 'Nouveau commit',
           body: 'Le fichier README.txt a été mis à jour.',
           to: 'eya.mastour@esprit.com',
-          attachLog: 'README.txt'
+          attachments: 'README.txt'
         )
       }
     }
