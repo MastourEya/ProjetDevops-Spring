@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     // Checkout du code depuis GitHub
-                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/MastourEya/ProjetDevops-Spring.git', , credentialsId: 'eya']]])
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/MastourEya/ProjetDevops-Spring.git', credentialsId: 'eya']]])
                 }
             }
         }
