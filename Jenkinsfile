@@ -4,7 +4,6 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    // Checkout du code depuis GitHub
                     checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/MastourEya/ProjetDevops-Spring.git', credentialsId: 'eya']]])
                 }
             }
@@ -12,7 +11,6 @@ pipeline {
          stage('Checkout Frontend') {
             steps {
                 script {
-                    // Checkout du code frontend depuis GitHub (remplacez l'URL par celle de votre référentiel Angular)
                     checkout([$class: 'GitSCM',  branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/MastourEya/ProjetDevops-Angular', credentialsId: 'eya']]) // Assurez-vous de remplacer URL_DU_REPO_ANGULAR.git par l'URL de votre référentiel Angular
                 }
             }
